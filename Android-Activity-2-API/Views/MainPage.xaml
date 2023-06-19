@@ -1,15 +1,42 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Android_Activity_2_API.Views.MainPage"
-             Title="MainPage">
+             Title="{Binding Title}">
     <StackLayout>
         <Label 
             Text="Welcome to Main!"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
 
-        <Button Text="Check API"
-                HorizontalOptions="Center" />
+        <Label
+            x:Name="NameEnLabel"
+            Text="{Binding NameEn}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Label
+            x:Name="DateLabel"
+            Text="{Binding Date}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Label
+            x:Name="IsFederalLabel"
+            Text="{Binding IsFederal}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+         <Label
+            x:Name="ObservedDateLabel"
+            Text="{Binding ObservedDate}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Button
+            x:Name="GetHolidaysButton"
+            Text="Get API"
+            HorizontalOptions="Center"
+            Command="{Binding GetHolidaysCommand}" />
+
     </StackLayout>
 </ContentPage>

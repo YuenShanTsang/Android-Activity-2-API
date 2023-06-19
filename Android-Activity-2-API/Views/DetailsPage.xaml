@@ -5,7 +5,7 @@
              Title="DetailsPage">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to Deails!"
+            Text="Welcome to Details!"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
     </VerticalStackLayout>

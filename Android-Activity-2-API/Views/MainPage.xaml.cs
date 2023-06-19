@@ -1,9 +1,18 @@
-﻿namespace Android_Activity_2_API.Views;
+﻿using Android_Activity_2_API.Model;
+using Android_Activity_2_API.ViewModels;
+using System.Net.Http;
+using System.Text.Json;
 
-public partial class MainPage : ContentPage
+namespace Android_Activity_2_API.Views
 {
-	public MainPage()
-	{
-		InitializeComponent();
-	}
+    public partial class MainPage : ContentPage
+    {
+
+        public MainPage(MainViewModel viewModel)
+        {
+            InitializeComponent();
+
+            this.BindingContext = viewModel;
+        }
+    }
 }
