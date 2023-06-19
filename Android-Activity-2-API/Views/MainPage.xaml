@@ -2,41 +2,52 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Android_Activity_2_API.Views.MainPage"
              Title="{Binding Title}">
+
+    <!-- The ContentPage element represents the main page of the application -->
+    
     <StackLayout>
+        <!-- StackLayout is used to stack multiple elements vertically -->
+        
         <Label 
             Text="Welcome to Main!"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-
+        <!-- A Label element to display a welcome message -->
+        
         <Label
             x:Name="NameEnLabel"
             Text="{Binding NameEn}"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-
+        <!-- A Label element to display the NameEn property from the view model -->
+        
         <Label
             x:Name="DateLabel"
             Text="{Binding Date}"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-
+        <!-- A Label element to display the Date property from the view model -->
+        
         <Label
             x:Name="IsFederalLabel"
             Text="{Binding IsFederal}"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-
-         <Label
+        <!-- A Label element to display the IsFederal property from the view model -->
+        
+        <Label
             x:Name="ObservedDateLabel"
             Text="{Binding ObservedDate}"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-
+        <!-- A Label element to display the ObservedDate property from the view model -->
+        
         <Button
             x:Name="GetHolidaysButton"
             Text="Get API"
             HorizontalOptions="Center"
             Command="{Binding GetHolidaysCommand}" />
-
+        <!-- A Button element to trigger the GetHolidaysCommand from the view model -->
     </StackLayout>
+    
 </ContentPage>
